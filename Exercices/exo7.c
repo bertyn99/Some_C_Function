@@ -24,6 +24,17 @@ int *intervalMult(int n, int i)
 
     return array;
 }
+int sumArray(int array[], int arrayLength)
+{
+    int i;
+    float total;
+
+    for (i = 0; i < arrayLength; i++)
+    {
+        total += array[i];
+    }
+    return total;
+}
 void affiche(int tableau[], int tailleTableau)
 {
     int i;
@@ -35,8 +46,13 @@ void affiche(int tableau[], int tailleTableau)
 }
 int main()
 {
-    int n = 2;
-    int i = 10;
-    int array[i];
-    affiche(intervalMult(n, i), i);
+    int n;
+    int i;
+    printf("rentrez la valeur maximal de l'interval:");
+    scanf("%i", &i);
+    printf("\n rentrez la valeur u nombre dans vous voulez les multiple dans l'intervale");
+    scanf("%i", &n);
+    int *array = intervalMult(n, i);
+    affiche(array, i);
+    printf("total du tableau %i \n", sumArray(array, i));
 }
