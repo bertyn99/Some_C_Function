@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "exo8.h": "c",
+        "stdio.h": "c"
     }
 }
