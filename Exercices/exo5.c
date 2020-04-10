@@ -4,18 +4,21 @@
 float minArray(float *array, int arrayLength)
 {
     int i;
-    float total;
+    float min = array[0];
 
     for (i = 0; i < arrayLength; i++)
     {
-        total += array[i];
+        if (min > array[i])
+        {
+            min = array[i];
+        }
     }
-    return total;
+    return min;
 }
 
 int main(int argc, char const *argv[])
 {
-    float array[4] = {1, 2, 3.5, 4};
+    float array[4] = {2, 2, 1, 4};
 
-    printf("total du tableau %f \n", summArray(array, 4));
+    printf("la valeur min du tableau  est %f \n", minArray(array, 4));
 }
