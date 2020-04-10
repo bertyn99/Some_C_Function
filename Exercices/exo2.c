@@ -19,12 +19,12 @@ int stringlength(const char *string)
 
 int main()
 {
-    char string[] = "Salut";
+    char string[] = "Hello world";
     int length = 0;
 
     length = stringlength(string);
 
-    printf("La chaine de caractaire %s fait %d caracteres de long\n", string, length);
+    printf("La chaine de caractaire \"%s\" fait %d caracteres de long\n", string, length);
 
     return 0;
 }
